@@ -148,7 +148,7 @@
     width: 100%;
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
     overflow: hidden;
     padding-top: 0;
   }
@@ -353,11 +353,10 @@
     align-items: center;
   }
 
-  .originals-text { }
-
   .originals-text .section-title { margin-bottom: 1.5rem; }
   .originals-text .section-body { margin-bottom: 2.5rem; }
 
+  /* 3-image grid: top image full width, two below side by side */
   .originals-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -371,16 +370,20 @@
 
   .originals-grid .img-wrap:first-child {
     grid-column: 1 / -1;
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3;
   }
 
   .originals-grid img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center 25%;
     display: block;
     transition: transform 0.6s ease;
+  }
+
+  .originals-grid .img-wrap:first-child img {
+    object-position: center 20%;
   }
 
   .originals-grid .img-wrap:hover img { transform: scale(1.04); }
@@ -406,13 +409,6 @@
     gap: 2rem;
   }
 
-  .process-heading {
-    position: relative;
-    padding-left: 0;
-    border-left: none;
-    margin-bottom: 0.5rem;
-  }
-
   .process-label {
     display: block;
     font-family: 'Cormorant Garamond', serif;
@@ -425,12 +421,6 @@
     margin-bottom: 0.5rem;
   }
 
-  .sketch-header .section-title {
-    color: var(--gold-light);
-    font-size: clamp(2.5rem, 4vw, 4rem);
-    padding-left: 1.5rem;
-  }
-
   .sketch-section-title {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
@@ -439,28 +429,9 @@
     color: var(--gold-light);
     letter-spacing: -0.01em;
     line-height: 1.05;
-    padding-left: 0;
   }
 
-  .sketch-header .section-body { color: #e8c96a; font-size: 1.15rem; font-weight: 400; }
-
-  .sketch-body-text {
-    color: #e8c96a !important;
-    font-size: 1.15rem !important;
-    font-weight: 400 !important;
-    line-height: 1.8;
-    max-width: 520px;
-  }
-
-  .sketch-pair-label span {
-    font-size: 0.75rem !important;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: #c9a84c !important;
-  }
-
-  .sketch-pair-label span:last-child { color: #e2c36a !important; }
-
+  /* Each sketch-pair: image spans both cols, label below */
   .sketch-pairs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -468,22 +439,23 @@
   }
 
   .sketch-pair {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
     overflow: hidden;
   }
 
   .sketch-pair .img-wrap {
     overflow: hidden;
-    aspect-ratio: 3/4;
+    aspect-ratio: 4/3;
+    width: 100%;
   }
 
   .sketch-pair img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center 20%;
     display: block;
     transition: transform 0.6s ease;
   }
@@ -491,10 +463,16 @@
   .sketch-pair .img-wrap:hover img { transform: scale(1.04); }
 
   .sketch-pair-label {
-    grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
-    padding-top: 0.75rem;
+    padding-top: 0.25rem;
+  }
+
+  .sketch-pair-label span {
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
   }
 
   /* ── JEWELLERY ── */
@@ -514,72 +492,31 @@
     margin-bottom: 5rem;
   }
 
-  .jewellery-title-block {
-    text-align: center;
-  }
-
-  .jewellery-db-monogram {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: clamp(6rem, 14vw, 12rem);
-    font-weight: 400;
-    color: var(--black);
-    letter-spacing: -0.25em;
-    line-height: 0.9;
-    margin-bottom: 1rem;
-    position: relative;
-    display: inline-block;
-    text-shadow: 3px 3px 0px rgba(201,168,76,0.3), -1px -1px 0px rgba(201,168,76,0.15);
-  }
-
-  .jewellery-db-monogram .mono-d {
-    display: inline-block;
-    transform: rotate(-5deg) translateX(0.08em);
-    position: relative;
-    z-index: 2;
-  }
-
-  .jewellery-db-monogram .mono-b {
-    display: inline-block;
-    transform: rotate(5deg) translateX(-0.08em);
-    position: relative;
-    z-index: 1;
-    opacity: 0.85;
-  }
-
-  .jewellery-db-monogram::after {
-    content: '';
-    display: block;
-    width: 80%;
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--gold), transparent);
-    margin: 0.3rem auto 0;
-  }
-
-  .jewellery-header .section-title { margin-bottom: 1rem; }
-
   .jewellery-header .section-body {
     margin: 0 auto;
     text-align: center;
   }
 
+  /* Jewellery grid: hero takes left col spanning 2 rows, 4 secondaries on right */
   .jewellery-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 1rem;
   }
 
   .j-hero {
+    grid-column: 1;
     grid-row: 1 / 3;
     overflow: hidden;
+    aspect-ratio: 2/3;
   }
 
   .j-hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center 35%;
     display: block;
     transition: transform 0.6s ease;
   }
@@ -595,7 +532,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center 30%;
     display: block;
     transition: transform 0.6s ease;
   }
@@ -647,9 +584,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center 20%;
     display: block;
     transition: transform 0.6s ease;
+  }
+
+  .fashion-images .img-wrap:first-child img {
+    object-position: center 15%;
   }
 
   .fashion-images .img-wrap:hover img { transform: scale(1.04); }
@@ -681,23 +622,21 @@
     gap: 1rem;
   }
 
+  /* All items default to square-ish ratio — prevents thin strips in 4-col grid */
   .masonry-item {
     overflow: hidden;
+    aspect-ratio: 2/3;
   }
 
-  .masonry-item:nth-child(1) { aspect-ratio: 3/4; }
-  .masonry-item:nth-child(2) { aspect-ratio: 3/4; grid-row: span 1; }
-  .masonry-item:nth-child(3) { aspect-ratio: 2/3; }
-  .masonry-item:nth-child(4) { aspect-ratio: 3/4; }
-  .masonry-item:nth-child(5) { aspect-ratio: 4/3; grid-column: span 2; }
-  .masonry-item:nth-child(6) { aspect-ratio: 3/4; }
-  .masonry-item:nth-child(7) { aspect-ratio: 3/4; }
+  /* Wider feature items */
+  .masonry-item:nth-child(5) { aspect-ratio: 16/9; grid-column: span 2; }
+  .masonry-item:nth-child(9) { aspect-ratio: 16/9; grid-column: span 2; }
 
   .masonry-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center 25%;
     display: block;
     transition: transform 0.6s ease;
   }
@@ -729,7 +668,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center 30%;
     display: block;
   }
 
@@ -770,8 +709,15 @@
     text-align: center;
   }
 
-  .contact-inner .section-title { color: var(--cream); margin-bottom: 1rem; }
-  .contact-inner .section-body { color: var(--gold-pale); margin: 0 auto 3rem; }
+  .contact-inner .section-title {
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+
+  .contact-inner .section-body {
+    color: var(--gold-pale);
+    margin: 0 auto 3rem;
+  }
 
   .contact-form {
     display: grid;
@@ -864,9 +810,7 @@
 
   .footer-nav a:hover { color: var(--gold); }
 
-  .footer-contact {
-    text-align: right;
-  }
+  .footer-contact { text-align: right; }
 
   .footer-contact a {
     display: block;
@@ -928,107 +872,7 @@
     line-height: 1;
   }
 
-  /* ── RESPONSIVE ── */
-
-  /* Tablet */
-  @media (max-width: 1100px) {
-    nav { padding: 1rem 2rem; }
-
-    .nav-links { display: none; }
-    .nav-cta { display: none; }
-    .hamburger { display: flex; }
-
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-
-    .hero-image-side { min-height: 60vw; max-height: 70vh; }
-
-    .hero-text-side {
-      padding: 3.5rem 2rem 3.5rem 2rem;
-      min-height: auto;
-    }
-
-    .hero-text-side::before { display: none; }
-    .hero-disciplines { display: none; }
-
-    .originals-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 2rem; }
-
-    .sketch-pairs { grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .sketch-pairs .sketch-pair:last-child { display: none; }
-    .sketch-inner { padding: 0 2rem; }
-
-    .jewellery-grid { grid-template-columns: 1fr 1fr; }
-    .j-hero { grid-row: auto; grid-column: 1 / -1; aspect-ratio: 4/3; }
-    .j-secondary { aspect-ratio: 3/4; }
-    .jewellery-inner { padding: 0 2rem; }
-
-    .fashion-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 2rem; }
-
-    .masonry { grid-template-columns: repeat(2, 1fr); }
-    .masonry-item:nth-child(5) { grid-column: span 1; aspect-ratio: 3/4; }
-    .gallery-inner { padding: 0 2rem; }
-
-    .about-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 2rem; }
-    .about-image { aspect-ratio: 4/3; }
-
-    .contact-inner { padding: 0 2rem; }
-
-    footer { grid-template-columns: 1fr 1fr; padding: 2.5rem 2rem; }
-    .footer-contact { text-align: left; }
-    .footer-copy { grid-column: 1 / -1; }
-  }
-
-  /* Mobile */
-  @media (max-width: 680px) {
-    body { font-size: 16px; }
-
-    nav { padding: 1rem 1.5rem; }
-
-    .hero-image-side { min-height: 75vw; }
-
-    .hero-text-side { padding: 3rem 1.5rem; }
-
-    .hero-headline { font-size: clamp(2.4rem, 8vw, 3.5rem); }
-
-    .hero-actions { flex-direction: column; }
-    .btn-primary, .btn-ghost { text-align: center; }
-
-    section { padding: 5rem 0; }
-
-    .originals-inner { padding: 0 1.5rem; gap: 2.5rem; }
-    .originals-grid { grid-template-columns: 1fr; }
-    .originals-grid .img-wrap:first-child { aspect-ratio: 4/3; }
-    .originals-grid .img-wrap { aspect-ratio: 4/3; }
-
-    .sketch-pairs { grid-template-columns: 1fr; }
-    .sketch-pairs .sketch-pair:last-child { display: grid; }
-    .sketch-inner { padding: 0 1.5rem; }
-    .sketch-header { flex-direction: column; }
-
-    .jewellery-grid { grid-template-columns: 1fr; }
-    .j-hero { aspect-ratio: 3/4; }
-    .jewellery-inner { padding: 0 1.5rem; }
-
-    .fashion-inner { padding: 0 1.5rem; }
-    .fashion-images { grid-template-columns: 1fr; }
-    .fashion-images .img-wrap:first-child { aspect-ratio: 3/4; }
-    .fashion-images .img-wrap { aspect-ratio: 3/4; }
-
-    .masonry { grid-template-columns: 1fr 1fr; }
-    .masonry-item:nth-child(5) { grid-column: span 2; aspect-ratio: 4/3; }
-    .gallery-inner { padding: 0 1.5rem; }
-
-    .about-inner { padding: 0 1.5rem; }
-
-    .contact-inner { padding: 0 1.5rem; }
-    .form-row { grid-template-columns: 1fr; }
-
-    footer { grid-template-columns: 1fr; padding: 2.5rem 1.5rem; gap: 2rem; }
-    .footer-copy { grid-column: 1; }
-
-    .intro-strip { gap: 1.5rem; padding: 2rem 1.5rem; }
-    .intro-divider { display: none; }
-  }
-
+  /* ── DECORATIVE HEADINGS ── */
   .originals-art-heading {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
@@ -1041,7 +885,6 @@
     letter-spacing: 0.12em;
     line-height: 1;
     margin-bottom: 0.75rem;
-    position: relative;
     display: inline-block;
   }
 
@@ -1080,6 +923,15 @@
     display: inline-block;
   }
 
+  .collection-heading::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 0.5rem auto 0;
+  }
+
   .about-heading {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
@@ -1104,64 +956,98 @@
     margin-top: 0.5rem;
   }
 
-  .collection-heading::after {
-    content: '';
-    display: block;
-    width: 60%;
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--gold), transparent);
-    margin: 0.5rem auto 0;
-  }
-
-  /* ── RESPONSIVE IMAGE IMPROVEMENTS ── */
-
-  /* Portrait images: show face + jewellery on all screens */
-  .originals-grid .img-wrap img { object-position: center 30%; }
-  .originals-grid .img-wrap:first-child img { object-position: center 25%; }
-
-  /* Jewellery section: show full jewellery not just face */
-  .j-hero img { object-position: center 35%; }
-  .j-secondary img { object-position: center 30%; }
-
-  /* Fashion: show full figure including clothing */
-  .fashion-images .img-wrap img { object-position: center 20%; }
-  .fashion-images .img-wrap:first-child img { object-position: center 15%; }
-
-  /* Sketch pairs: portrait so center top works well */
-  .sketch-pair .img-wrap img { object-position: center 15%; }
-
-  /* Gallery: mix of positions to show jewellery */
-  .masonry-item:nth-child(1) img { object-position: center 30%; }
-  .masonry-item:nth-child(2) img { object-position: center 25%; }
-  .masonry-item:nth-child(3) img { object-position: center 30%; }
-  .masonry-item:nth-child(4) img { object-position: center 35%; }
-  .masonry-item:nth-child(5) img { object-position: center 25%; }
-  .masonry-item:nth-child(6) img { object-position: center 30%; }
-  .masonry-item:nth-child(7) img { object-position: center 25%; }
-  .masonry-item:nth-child(8) img { object-position: center 30%; }
-  .masonry-item:nth-child(9) img { object-position: center 35%; }
-  .masonry-item:nth-child(10) img { object-position: center 30%; }
-  .masonry-item:nth-child(11) img { object-position: center 25%; }
-
-  /* About section */
-  .about-image img { object-position: center 30%; }
-
-  /* Tablet adjustments */
+  /* ── TABLET ── */
   @media (max-width: 1100px) {
-    .j-hero img { object-position: center 30%; }
-    .fashion-images .img-wrap img { object-position: center 20%; }
-    .sketch-pair .img-wrap img { object-position: center 15%; }
+    nav { padding: 1rem 2rem; }
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .hamburger { display: flex; }
+
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-image-side { min-height: 60vw; max-height: 70vh; }
+    .hero-text-side { padding: 3.5rem 2rem; min-height: auto; }
+    .hero-text-side::before { display: none; }
+    .hero-disciplines { display: none; }
+
+    .originals-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 2rem; }
+
+    .sketch-pairs { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .sketch-pairs .sketch-pair:last-child { display: none; }
+    .sketch-inner { padding: 0 2rem; }
+
+    .jewellery-grid { grid-template-columns: 1fr 1fr; }
+    .j-hero { grid-row: auto; grid-column: 1 / -1; aspect-ratio: 4/3; }
+    .j-secondary { aspect-ratio: 3/4; }
+    .jewellery-inner { padding: 0 2rem; }
+
+    .fashion-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 2rem; }
+
+    .masonry { grid-template-columns: repeat(2, 1fr); }
+    .masonry-item:nth-child(5) { grid-column: span 1; aspect-ratio: 3/4; }
+    .masonry-item:nth-child(9) { grid-column: span 1; aspect-ratio: 3/4; }
+    .gallery-inner { padding: 0 2rem; }
+
+    .about-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 2rem; }
+    .about-image { aspect-ratio: 4/3; }
+
+    .contact-inner { padding: 0 2rem; }
+
+    footer { grid-template-columns: 1fr 1fr; padding: 2.5rem 2rem; }
+    .footer-contact { text-align: left; }
+    .footer-copy { grid-column: 1 / -1; }
   }
 
-  /* Mobile adjustments: taller containers so more image visible */
+  /* ── MOBILE ── */
   @media (max-width: 680px) {
-    .originals-grid .img-wrap { aspect-ratio: 3/4; }
-    .j-secondary { aspect-ratio: 3/4; }
-    .sketch-pair .img-wrap { aspect-ratio: 2/3; }
+    body { font-size: 16px; }
+    nav { padding: 1rem 1.5rem; }
+
+    .hero-image-side { min-height: 75vw; }
+    .hero-text-side { padding: 3rem 1.5rem; }
+    .hero-headline { font-size: clamp(2.4rem, 8vw, 3.5rem); }
+    .hero-actions { flex-direction: column; }
+    .btn-primary, .btn-ghost { text-align: center; }
+
+    section { padding: 5rem 0; }
+
+    .originals-inner { padding: 0 1.5rem; gap: 2.5rem; }
+    .originals-grid { grid-template-columns: 1fr; }
+    .originals-grid .img-wrap { aspect-ratio: 4/3; }
+    .originals-grid .img-wrap:first-child { aspect-ratio: 4/3; }
+
+    .sketch-pairs { grid-template-columns: 1fr; }
+    .sketch-pairs .sketch-pair:last-child { display: flex; }
+    .sketch-inner { padding: 0 1.5rem; }
+    .sketch-header { flex-direction: column; }
+    .sketch-pair .img-wrap { aspect-ratio: 4/3; }
+
+    .jewellery-grid { grid-template-columns: 1fr; }
+    .j-hero { aspect-ratio: 4/3; }
+    .j-secondary { aspect-ratio: 4/3; }
+    .jewellery-inner { padding: 0 1.5rem; }
+
+    .fashion-inner { padding: 0 1.5rem; }
+    .fashion-images { grid-template-columns: 1fr; }
+    .fashion-images .img-wrap { aspect-ratio: 4/3; }
+    .fashion-images .img-wrap:first-child { aspect-ratio: 4/3; }
+
+    .masonry { grid-template-columns: 1fr 1fr; }
     .masonry-item { aspect-ratio: 3/4 !important; }
     .masonry-item:nth-child(5) { grid-column: span 2; aspect-ratio: 16/9 !important; }
-    .j-hero img { object-position: center 25%; }
-    .fashion-images .img-wrap img { object-position: center 15%; }
+    .masonry-item:nth-child(9) { grid-column: span 2; aspect-ratio: 16/9 !important; }
+    .gallery-inner { padding: 0 1.5rem; }
+
+    .about-inner { padding: 0 1.5rem; }
+    .about-image { aspect-ratio: 4/3; }
+
+    .contact-inner { padding: 0 1.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+
+    footer { grid-template-columns: 1fr; padding: 2.5rem 1.5rem; gap: 2rem; }
+    .footer-copy { grid-column: 1; }
+
+    .intro-strip { gap: 1.5rem; padding: 2rem 1.5rem; }
+    .intro-divider { display: none; }
   }
 </style>
 </head>
@@ -1274,16 +1160,14 @@
   <div class="sketch-inner">
     <div class="sketch-header">
       <div>
-        <div class="process-heading">
-          <span class="process-label">The Process</span>
-          <h2 class="sketch-section-title">From pencil<br>to real life.</h2>
-        </div>
+        <span class="process-label">The Process</span>
+        <h2 class="sketch-section-title">From pencil<br>to real life.</h2>
       </div>
     </div>
     <div class="sketch-pairs">
       <div class="sketch-pair">
         <div class="img-wrap">
-          <img src="images/sketch_digital1.jpg" alt="Dana Bernice pencil sketch and digitised portrait side by side" loading="lazy">
+          <img src="images/sketch_digital1.jpg" alt="Dana Bernice pencil sketch and digitised portrait" loading="lazy">
         </div>
         <div class="sketch-pair-label">
           <span>The Drawing</span>
@@ -1330,7 +1214,7 @@
         <img src="images/jewellery_bangles.jpg" alt="Dana Bernice UK gold bangles and DB earring" loading="lazy">
       </div>
       <div class="j-secondary">
-        <img src="images/jewellery_hat.jpg" alt="Dana Bernice UK DB hat, diamond earrings, pendant necklace and brooch" loading="lazy">
+        <img src="images/extra6.jpg" alt="Dana Bernice UK DB earrings portrait" loading="lazy">
       </div>
       <div class="j-secondary">
         <img src="images/jewellery_portrait.jpg" alt="Dana Bernice UK DB drop earring close up" loading="lazy">
@@ -1443,6 +1327,7 @@
 <section class="contact" id="contact">
   <div class="contact-inner">
     <span class="section-label">Get in Touch</span>
+    <h2 class="section-title">Get in Touch</h2>
     <p class="section-body">For print orders, jewellery enquiries, or anything else: fill in the form and Dana will be in touch.</p>
     <form class="contact-form" name="dana-contact" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="dana-contact">
