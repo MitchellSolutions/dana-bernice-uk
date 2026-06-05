@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dana Bernice UK: Original Art, Fashion Design & Gold Jewellery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #f0e6cc;
+    --cream-dark: #e6d5b8;
+    --cream-mid: #f2e8d5;
+    --gold: #c9a84c;
+    --gold-light: #e2c36a;
+    --gold-pale: #f0dfa0;
+    --gold-deep: #a07830;
+    --black: #0e0c0a;
+    --black-soft: #1a1714;
+    --charcoal: #2c2820;
+    --text-dark: #1e1b16;
+    --text-mid: #4a4035;
+    --text-light: #8a7a68;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Cormorant Garamond', serif;
+    background: var(--cream-mid);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 3rem;
+    background: rgba(249,244,236,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    transition: padding 0.3s ease;
+  }
+
+  .nav-wordmark {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+  }
+
+  .nav-initials {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .nav-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .nav-name span {
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  .nav-name small {
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #0e0c0a !important;
+    text-decoration: none !important;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold) !important; }
+
+  .nav-cta {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    border: 1px solid var(--gold);
+    padding: 0.5rem 1.2rem;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .nav-cta:hover {
+    background: var(--gold);
+    color: var(--cream-mid);
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--text-dark);
+    transition: all 0.3s;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    padding-top: 0;
+  }
+
+  .hero-image-side {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+
+  .hero-image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+  }
+
+  .hero-text-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 4rem 4rem 4rem;
+    background: var(--black);
+    position: relative;
+  }
+
+  .hero-text-side::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+  }
+
+  .hero-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+  }
+
+  .hero-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-headline em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--gold-pale);
+    line-height: 1.75;
+    margin-bottom: 3rem;
+    max-width: 400px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    background: var(--gold);
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.25s;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); }
+
+  .btn-ghost {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--cream);
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .hero-disciplines {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 4rem;
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(245,239,228,0.35);
+  }
+
+  .hero-disciplines span::before {
+    content: '·';
+    margin-right: 1.5rem;
+    color: var(--gold);
+  }
+
+  .hero-disciplines span:first-child::before { display: none; }
+
+  /* ── SECTION COMMON ── */
+  section { padding: 7rem 0; }
+
+  .section-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .section-title {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  .section-body {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.8;
+    max-width: 520px;
+  }
+
+  /* ── INTRO STRIP ── */
+  .intro-strip {
+    background: var(--black);
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .intro-strip-item {
+    text-align: center;
+    color: var(--cream);
+  }
+
+  .intro-strip-item .label {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .intro-strip-item .value {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+
+  .intro-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(201,168,76,0.3);
+  }
+
+  /* ── ORIGINALS SECTION ── */
+  .originals {
+    background: var(--cream-mid);
+  }
+
+  .originals-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .originals-text { }
+
+  .originals-text .section-title { margin-bottom: 1.5rem; }
+  .originals-text .section-body { margin-bottom: 2.5rem; }
+
+  .originals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .originals-grid .img-wrap {
+    overflow: hidden;
+    aspect-ratio: 3/4;
+  }
+
+  .originals-grid .img-wrap:first-child {
+    grid-column: 1 / -1;
+    aspect-ratio: 16/9;
+  }
+
+  .originals-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .originals-grid .img-wrap:hover img { transform: scale(1.04); }
+
+  /* ── SKETCH TO REAL ── */
+  .sketch-section {
+    background: var(--black);
+    padding: 7rem 0;
+  }
+
+  .sketch-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  .sketch-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .process-heading {
+    position: relative;
+    padding-left: 0;
+    border-left: none;
+    margin-bottom: 0.5rem;
+  }
+
+  .process-label {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 300;
+    color: var(--gold-light);
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    margin-bottom: 0.5rem;
+  }
+
+  .sketch-header .section-title {
+    color: var(--gold-light);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    padding-left: 1.5rem;
+  }
+
+  .sketch-section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 300;
+    color: var(--gold-light);
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    padding-left: 0;
+  }
+
+  .sketch-header .section-body { color: #e8c96a; font-size: 1.15rem; font-weight: 400; }
+
+  .sketch-body-text {
+    color: #e8c96a !important;
+    font-size: 1.15rem !important;
+    font-weight: 400 !important;
+    line-height: 1.8;
+    max-width: 520px;
+  }
+
+  .sketch-pair-label span {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #c9a84c !important;
+  }
+
+  .sketch-pair-label span:last-child { color: #e2c36a !important; }
+
+  .sketch-pairs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .sketch-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    overflow: hidden;
+  }
+
+  .sketch-pair .img-wrap {
+    overflow: hidden;
+    aspect-ratio: 3/4;
+  }
+
+  .sketch-pair img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .sketch-pair .img-wrap:hover img { transform: scale(1.04); }
+
+  .sketch-pair-label {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.75rem;
+  }
+
+  /* ── JEWELLERY ── */
+  .jewellery {
+    background: var(--cream-dark);
+    padding: 7rem 0;
+  }
+
+  .jewellery-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  .jewellery-header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .jewellery-title-block {
+    text-align: center;
+  }
+
+  .jewellery-db-monogram {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(6rem, 14vw, 12rem);
+    font-weight: 400;
+    color: var(--black);
+    letter-spacing: -0.25em;
+    line-height: 0.9;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    text-shadow: 3px 3px 0px rgba(201,168,76,0.3), -1px -1px 0px rgba(201,168,76,0.15);
+  }
+
+  .jewellery-db-monogram .mono-d {
+    display: inline-block;
+    transform: rotate(-5deg) translateX(0.08em);
+    position: relative;
+    z-index: 2;
+  }
+
+  .jewellery-db-monogram .mono-b {
+    display: inline-block;
+    transform: rotate(5deg) translateX(-0.08em);
+    position: relative;
+    z-index: 1;
+    opacity: 0.85;
+  }
+
+  .jewellery-db-monogram::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 0.3rem auto 0;
+  }
+
+  .jewellery-header .section-title { margin-bottom: 1rem; }
+
+  .jewellery-header .section-body {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .jewellery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+  }
+
+  .j-hero {
+    grid-row: 1 / 3;
+    overflow: hidden;
+  }
+
+  .j-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .j-hero:hover img { transform: scale(1.04); }
+
+  .j-secondary {
+    overflow: hidden;
+    aspect-ratio: 3/4;
+  }
+
+  .j-secondary img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .j-secondary:hover img { transform: scale(1.04); }
+
+  .jewellery-caption {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    color: var(--text-light);
+    font-style: italic;
+  }
+
+  /* ── FASHION ── */
+  .fashion {
+    background: var(--black-soft);
+    padding: 7rem 0;
+  }
+
+  .fashion-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .fashion-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .fashion-images .img-wrap {
+    overflow: hidden;
+    aspect-ratio: 2/3;
+  }
+
+  .fashion-images .img-wrap:first-child {
+    grid-column: 1 / -1;
+    aspect-ratio: 4/3;
+  }
+
+  .fashion-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .fashion-images .img-wrap:hover img { transform: scale(1.04); }
+
+  .fashion-text .section-title { color: var(--gold-light); margin-bottom: 1.5rem; }
+  .fashion-text .section-body { color: var(--gold-pale); margin-bottom: 2.5rem; }
+  .fashion-text .section-label { color: var(--gold); }
+
+  /* ── GALLERY ── */
+  .gallery {
+    background: var(--cream-mid);
+    padding: 7rem 0;
+  }
+
+  .gallery-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  .gallery-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .masonry {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .masonry-item {
+    overflow: hidden;
+  }
+
+  .masonry-item:nth-child(1) { aspect-ratio: 3/4; }
+  .masonry-item:nth-child(2) { aspect-ratio: 3/4; grid-row: span 1; }
+  .masonry-item:nth-child(3) { aspect-ratio: 2/3; }
+  .masonry-item:nth-child(4) { aspect-ratio: 3/4; }
+  .masonry-item:nth-child(5) { aspect-ratio: 4/3; grid-column: span 2; }
+  .masonry-item:nth-child(6) { aspect-ratio: 3/4; }
+  .masonry-item:nth-child(7) { aspect-ratio: 3/4; }
+
+  .masonry-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .masonry-item:hover img { transform: scale(1.05); }
+
+  /* ── ABOUT ── */
+  .about {
+    background: var(--cream-dark);
+    padding: 7rem 0;
+  }
+
+  .about-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .about-image {
+    overflow: hidden;
+    aspect-ratio: 3/4;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+  }
+
+  .about-text .section-title { margin-bottom: 1.5rem; }
+  .about-text .section-body { margin-bottom: 1.5rem; }
+
+  .about-quote {
+    border-left: 2px solid var(--gold);
+    padding-left: 1.5rem;
+    margin: 2.5rem 0;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.7;
+  }
+
+  .about-quote cite {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-style: normal;
+    color: var(--text-light);
+  }
+
+  /* ── CONTACT ── */
+  .contact {
+    background: var(--black);
+    padding: 7rem 0;
+  }
+
+  .contact-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    text-align: center;
+  }
+
+  .contact-inner .section-title { color: var(--cream); margin-bottom: 1rem; }
+  .contact-inner .section-body { color: var(--gold-pale); margin: 0 auto 3rem; }
+
+  .contact-form {
+    display: grid;
+    gap: 1.2rem;
+    text-align: left;
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+  .form-group label {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,168,76,0.2);
+    color: var(--cream);
+    padding: 0.85rem 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+
+  .form-group select option { background: var(--black-soft); }
+
+  .form-group textarea { resize: vertical; min-height: 130px; }
+
+  .form-submit {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--black-soft);
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    border-top: 1px solid rgba(201,168,76,0.15);
+  }
+
+  .footer-brand .initials {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    line-height: 1.7;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .footer-nav a {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-nav a:hover { color: var(--gold); }
+
+  .footer-contact {
+    text-align: right;
+  }
+
+  .footer-contact a {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--gold-pale);
+    text-decoration: none;
+    margin-bottom: 0.4rem;
+    transition: color 0.2s;
+  }
+
+  .footer-contact a:hover { color: var(--gold); }
+
+  .footer-copy {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: rgba(201,168,76,0.4);
+    border-top: 1px solid rgba(201,168,76,0.1);
+    padding-top: 2rem;
+    margin-top: 1rem;
+  }
+
+  /* ── MOBILE NAV MENU ── */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--black);
+    z-index: 200;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .mobile-menu a:hover { color: var(--gold); }
+
+  .mobile-close {
+    position: absolute;
+    top: 1.5rem; right: 2rem;
+    background: none;
+    border: none;
+    color: var(--cream);
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  /* ── RESPONSIVE ── */
+
+  /* Tablet */
+  @media (max-width: 1100px) {
+    nav { padding: 1rem 2rem; }
+
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .hamburger { display: flex; }
+
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+
+    .hero-image-side { min-height: 60vw; max-height: 70vh; }
+
+    .hero-text-side {
+      padding: 3.5rem 2rem 3.5rem 2rem;
+      min-height: auto;
+    }
+
+    .hero-text-side::before { display: none; }
+    .hero-disciplines { display: none; }
+
+    .originals-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 2rem; }
+
+    .sketch-pairs { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .sketch-pairs .sketch-pair:last-child { display: none; }
+    .sketch-inner { padding: 0 2rem; }
+
+    .jewellery-grid { grid-template-columns: 1fr 1fr; }
+    .j-hero { grid-row: auto; grid-column: 1 / -1; aspect-ratio: 4/3; }
+    .j-secondary { aspect-ratio: 3/4; }
+    .jewellery-inner { padding: 0 2rem; }
+
+    .fashion-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 2rem; }
+
+    .masonry { grid-template-columns: repeat(2, 1fr); }
+    .masonry-item:nth-child(5) { grid-column: span 1; aspect-ratio: 3/4; }
+    .gallery-inner { padding: 0 2rem; }
+
+    .about-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 2rem; }
+    .about-image { aspect-ratio: 4/3; }
+
+    .contact-inner { padding: 0 2rem; }
+
+    footer { grid-template-columns: 1fr 1fr; padding: 2.5rem 2rem; }
+    .footer-contact { text-align: left; }
+    .footer-copy { grid-column: 1 / -1; }
+  }
+
+  /* Mobile */
+  @media (max-width: 680px) {
+    body { font-size: 16px; }
+
+    nav { padding: 1rem 1.5rem; }
+
+    .hero-image-side { min-height: 75vw; }
+
+    .hero-text-side { padding: 3rem 1.5rem; }
+
+    .hero-headline { font-size: clamp(2.4rem, 8vw, 3.5rem); }
+
+    .hero-actions { flex-direction: column; }
+    .btn-primary, .btn-ghost { text-align: center; }
+
+    section { padding: 5rem 0; }
+
+    .originals-inner { padding: 0 1.5rem; gap: 2.5rem; }
+    .originals-grid { grid-template-columns: 1fr; }
+    .originals-grid .img-wrap:first-child { aspect-ratio: 4/3; }
+    .originals-grid .img-wrap { aspect-ratio: 4/3; }
+
+    .sketch-pairs { grid-template-columns: 1fr; }
+    .sketch-pairs .sketch-pair:last-child { display: grid; }
+    .sketch-inner { padding: 0 1.5rem; }
+    .sketch-header { flex-direction: column; }
+
+    .jewellery-grid { grid-template-columns: 1fr; }
+    .j-hero { aspect-ratio: 3/4; }
+    .jewellery-inner { padding: 0 1.5rem; }
+
+    .fashion-inner { padding: 0 1.5rem; }
+    .fashion-images { grid-template-columns: 1fr; }
+    .fashion-images .img-wrap:first-child { aspect-ratio: 3/4; }
+    .fashion-images .img-wrap { aspect-ratio: 3/4; }
+
+    .masonry { grid-template-columns: 1fr 1fr; }
+    .masonry-item:nth-child(5) { grid-column: span 2; aspect-ratio: 4/3; }
+    .gallery-inner { padding: 0 1.5rem; }
+
+    .about-inner { padding: 0 1.5rem; }
+
+    .contact-inner { padding: 0 1.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+
+    footer { grid-template-columns: 1fr; padding: 2.5rem 1.5rem; gap: 2rem; }
+    .footer-copy { grid-column: 1; }
+
+    .intro-strip { gap: 1.5rem; padding: 2rem 1.5rem; }
+    .intro-divider { display: none; }
+  }
+
+  .originals-art-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    font-weight: 300;
+    background: linear-gradient(135deg, var(--gold-deep) 0%, var(--gold-light) 40%, var(--gold) 60%, var(--gold-deep) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    position: relative;
+    display: inline-block;
+  }
+
+  .originals-art-heading::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    margin-top: 0.5rem;
+  }
+
+  .fashion-design-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-weight: 300;
+    color: var(--gold-light);
+    letter-spacing: 0.08em;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .collection-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(3.5rem, 7vw, 7rem);
+    font-weight: 500;
+    background: linear-gradient(135deg, var(--gold-deep) 0%, var(--gold-light) 40%, var(--gold) 60%, var(--gold-deep) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+
+  .about-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 500;
+    background: linear-gradient(135deg, var(--gold-deep) 0%, var(--gold-light) 40%, var(--gold) 60%, var(--gold-deep) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+
+  .about-heading::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    margin-top: 0.5rem;
+  }
+
+  .collection-heading::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 0.5rem auto 0;
+  }
+
+  /* ── RESPONSIVE IMAGE IMPROVEMENTS ── */
+
+  /* Portrait images: show face + jewellery on all screens */
+  .originals-grid .img-wrap img { object-position: center 30%; }
+  .originals-grid .img-wrap:first-child img { object-position: center 25%; }
+
+  /* Jewellery section: show full jewellery not just face */
+  .j-hero img { object-position: center 35%; }
+  .j-secondary img { object-position: center 30%; }
+
+  /* Fashion: show full figure including clothing */
+  .fashion-images .img-wrap img { object-position: center 20%; }
+  .fashion-images .img-wrap:first-child img { object-position: center 15%; }
+
+  /* Sketch pairs: portrait so center top works well */
+  .sketch-pair .img-wrap img { object-position: center 15%; }
+
+  /* Gallery: mix of positions to show jewellery */
+  .masonry-item:nth-child(1) img { object-position: center 30%; }
+  .masonry-item:nth-child(2) img { object-position: center 25%; }
+  .masonry-item:nth-child(3) img { object-position: center 30%; }
+  .masonry-item:nth-child(4) img { object-position: center 35%; }
+  .masonry-item:nth-child(5) img { object-position: center 25%; }
+  .masonry-item:nth-child(6) img { object-position: center 30%; }
+  .masonry-item:nth-child(7) img { object-position: center 25%; }
+  .masonry-item:nth-child(8) img { object-position: center 30%; }
+  .masonry-item:nth-child(9) img { object-position: center 35%; }
+  .masonry-item:nth-child(10) img { object-position: center 30%; }
+  .masonry-item:nth-child(11) img { object-position: center 25%; }
+
+  /* About section */
+  .about-image img { object-position: center 30%; }
+
+  /* Tablet adjustments */
+  @media (max-width: 1100px) {
+    .j-hero img { object-position: center 30%; }
+    .fashion-images .img-wrap img { object-position: center 20%; }
+    .sketch-pair .img-wrap img { object-position: center 15%; }
+  }
+
+  /* Mobile adjustments: taller containers so more image visible */
+  @media (max-width: 680px) {
+    .originals-grid .img-wrap { aspect-ratio: 3/4; }
+    .j-secondary { aspect-ratio: 3/4; }
+    .sketch-pair .img-wrap { aspect-ratio: 2/3; }
+    .masonry-item { aspect-ratio: 3/4 !important; }
+    .masonry-item:nth-child(5) { grid-column: span 2; aspect-ratio: 16/9 !important; }
+    .j-hero img { object-position: center 25%; }
+    .fashion-images .img-wrap img { object-position: center 15%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobileMenu()">&#x2715;</button>
+  <a href="#art" onclick="closeMobileMenu()">Art &amp; Prints</a>
+  <a href="#jewellery" onclick="closeMobileMenu()">Jewellery</a>
+  <a href="#fashion" onclick="closeMobileMenu()">Fashion</a>
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-wordmark">
+    <div class="nav-initials">DB</div>
+    <div class="nav-name">
+      <span>Dana Bernice</span>
+      <small>UK</small>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#art">Art &amp; Prints</a></li>
+    <li><a href="#jewellery">Jewellery</a></li>
+    <li><a href="#fashion">Fashion</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get in Touch</a>
+  <button class="hamburger" onclick="openMobileMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-image-side">
+    <img src="images/hero.jpg" alt="Dana Bernice UK: artist, fashion designer, jeweller" loading="eager">
+  </div>
+  <div class="hero-text-side">
+    <span class="hero-tag">Original Art · Fashion · Gold Jewellery</span>
+    <h1 class="hero-headline"><em>A signature<br>in <span style="-webkit-text-fill-color:var(--gold); color:var(--gold);">gold.</span></em></h1>
+    <p class="hero-sub">Original pencil portraits, bespoke fashion design for tall men, women, boys, and girls, and DB gold jewellery.<br>Every face invented.<br>Every piece drawn by hand.</p>
+    <div class="hero-actions">
+      <a href="#art" class="btn-primary">Explore the Work</a>
+      <a href="#contact" class="btn-ghost">Get in Touch</a>
+    </div>
+    <div class="hero-disciplines">
+      <span>Original Art</span>
+      <span>Bespoke Fashion</span>
+      <span>Gold Jewellery</span>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO STRIP -->
+<div class="intro-strip">
+  <div class="intro-strip-item">
+    <span class="label">Medium</span>
+    <span class="value">Pencil &amp; Digital</span>
+  </div>
+  <div class="intro-divider"></div>
+  <div class="intro-strip-item">
+    <span class="label">Origin</span>
+    <span class="value">UK-Based Artist</span>
+  </div>
+  <div class="intro-divider"></div>
+  <div class="intro-strip-item">
+    <span class="label">Every portrait</span>
+    <span class="value">Invented from scratch</span>
+  </div>
+  <div class="intro-divider"></div>
+  <div class="intro-strip-item">
+    <span class="label">Fashion</span>
+    <span class="value">Designed for Tall</span>
+  </div>
+</div>
+
+<!-- ORIGINAL ART -->
+<section class="originals" id="art">
+  <div class="originals-inner">
+    <div class="originals-text">
+      <div class="originals-art-heading">Original Art</div>
+      <h2 class="section-title">Every face<br>invented.</h2>
+      <p class="section-body">No models. No references. No photographs. Dana creates people who do not exist and makes them feel entirely real. Each portrait begins with a blank page and nothing but imagination.</p>
+      <p class="section-body" style="margin-top:1rem;">Signed originals and high-resolution digital prints available.<br>Every original comes with a certificate of authenticity, signed by the artist.</p>
+      <div style="margin-top:2.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
+        <a href="#contact" class="btn-primary">Enquire About Prints</a>
+      </div>
+      <p style="margin-top:1.5rem; font-size:0.85rem; color:var(--text-light); font-style:italic;">Prints from £TBC &nbsp;·&nbsp; Originals from £TBC</p>
+    </div>
+    <div class="originals-grid">
+      <div class="img-wrap">
+        <img src="images/art_colour1.jpg" alt="Dana Bernice UK original coloured pencil portrait" loading="lazy">
+      </div>
+      <div class="img-wrap">
+        <img src="images/art_colour2.jpg" alt="Dana Bernice UK original portrait in warm amber tones" loading="lazy">
+      </div>
+      <div class="img-wrap">
+        <img src="images/art_classical.jpg" alt="Dana Bernice UK classical oil-style portrait" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKETCH TO REAL -->
+<section class="sketch-section">
+  <div class="sketch-inner">
+    <div class="sketch-header">
+      <div>
+        <div class="process-heading">
+          <span class="process-label">The Process</span>
+          <h2 class="sketch-section-title">From pencil<br>to real life.</h2>
+        </div>
+      </div>
+    </div>
+    <div class="sketch-pairs">
+      <div class="sketch-pair">
+        <div class="img-wrap">
+          <img src="images/sketch_digital1.jpg" alt="Dana Bernice pencil sketch and digitised portrait side by side" loading="lazy">
+        </div>
+        <div class="sketch-pair-label">
+          <span>The Drawing</span>
+          <span>The Digital</span>
+        </div>
+      </div>
+      <div class="sketch-pair">
+        <div class="img-wrap">
+          <img src="images/sketch_digital3.jpg" alt="Dana Bernice sketch to digital comparison" loading="lazy">
+        </div>
+        <div class="sketch-pair-label">
+          <span>The Drawing</span>
+          <span>The Digital</span>
+        </div>
+      </div>
+      <div class="sketch-pair">
+        <div class="img-wrap">
+          <img src="images/sketch_digital4.jpg" alt="Dana Bernice sketch and finished digital portrait" loading="lazy">
+        </div>
+        <div class="sketch-pair-label">
+          <span>The Drawing</span>
+          <span>The Digital</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JEWELLERY -->
+<section class="jewellery" id="jewellery">
+  <div class="jewellery-inner">
+    <div class="jewellery-header">
+      <h2 class="section-title">Drawn before<br>it was cast in <span style="color:var(--gold);">gold.</span></h2>
+      <p class="section-body" style="margin:1rem auto 0;">Every piece began as a pencil sketch. DB teardrop earrings, monogram pendants, signature chain pieces. Each piece is bespoke.</p>
+    </div>
+    <div class="jewellery-grid">
+      <div class="j-hero">
+        <img src="images/jewellery_closeup.jpg" alt="Dana Bernice UK DB monogram drop earrings with crystal teardrop" loading="lazy">
+      </div>
+      <div class="j-secondary">
+        <img src="images/jewellery_campaign.jpg" alt="Dana Bernice UK jewellery campaign with DB necklace" loading="lazy">
+      </div>
+      <div class="j-secondary">
+        <img src="images/jewellery_bangles.jpg" alt="Dana Bernice UK gold bangles and DB earring" loading="lazy">
+      </div>
+      <div class="j-secondary">
+        <img src="images/jewellery_hat.jpg" alt="Dana Bernice UK DB hat, diamond earrings, pendant necklace and brooch" loading="lazy">
+      </div>
+      <div class="j-secondary">
+        <img src="images/jewellery_portrait.jpg" alt="Dana Bernice UK DB drop earring close up" loading="lazy">
+      </div>
+      <div class="j-secondary">
+        <img src="images/sketch_digital2.jpg" alt="Dana Bernice UK jewellery worn" loading="lazy">
+      </div>
+    </div>
+    <p class="jewellery-caption">All pieces bespoke. Launching soon: register your interest below.</p>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="#contact" class="btn-primary">Register Interest</a>
+    </div>
+  </div>
+</section>
+
+<!-- FASHION -->
+<section class="fashion" id="fashion">
+  <div class="fashion-inner">
+    <div class="fashion-images">
+      <div class="img-wrap">
+        <img src="images/fashion_monogram.jpg" alt="Dana Bernice UK DB monogram print off-shoulder dress" loading="lazy">
+      </div>
+      <div class="img-wrap">
+        <img src="images/fashion1.jpg" alt="Dana Bernice UK white cutout fashion illustration" loading="lazy">
+      </div>
+      <div class="img-wrap">
+        <img src="images/fashion2.jpg" alt="Dana Bernice UK off-shoulder white dress fashion design" loading="lazy">
+      </div>
+    </div>
+    <div class="fashion-text">
+      <div class="fashion-design-heading">Fashion Design</div>
+      <h2 class="section-title">The monogram dress.<br>Drawn first.<br>Worn second.</h2>
+      <p class="section-body">The DB print (repeating monogram on champagne and deep black) is a fashion statement that began as a sketch on paper. Designed specifically for tall men, women, boys, and girls: every proportion cut for height, never adjusted down.</p>
+      <a href="#contact" class="btn-ghost" style="margin-top:1rem; display:inline-block;">Enquire About Fashion</a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="gallery-inner">
+    <div class="gallery-header">
+      <div class="collection-heading">The Collection</div>
+      <h2 class="section-title">Every character invented.<br>Every detail drawn.</h2>
+    </div>
+    <div class="masonry">
+      <div class="masonry-item">
+        <img src="images/sketch_raw2.jpg" alt="Dana Bernice UK pencil portrait with DB earrings" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="images/sketch_digital1.jpg" alt="Dana Bernice UK pencil to digital portrait" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="images/jewellery_portrait.jpg" alt="Dana Bernice UK DB earring portrait" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="images/art_colour2.jpg" alt="Dana Bernice UK amber portrait" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="images/sketch_digital4.jpg" alt="Dana Bernice UK sketch and digital comparison" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="images/jewellery_campaign.jpg" alt="Dana Bernice UK DB jewellery campaign" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="images/fashion1.jpg" alt="Dana Bernice UK fashion illustration" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="images/extra1.jpg" alt="Dana Bernice UK sketch to digital portrait" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="images/extra2.jpg" alt="Dana Bernice UK coloured pencil portrait with gold jewellery" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="images/extra3.jpg" alt="Dana Bernice UK portrait with gold earrings and necklace" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="images/extra6.jpg" alt="Dana Bernice UK fashion portrait with DB earrings" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="images/extra7.jpg" alt="Dana Bernice UK sketch to digital headwrap portrait" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="images/extra8.jpg" alt="Dana Bernice UK digital portrait with gold hoop earring" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-image">
+      <img src="images/jewellery_closeup.jpg" alt="Dana Bernice UK" loading="lazy">
+    </div>
+    <div class="about-text">
+      <div class="about-heading">About Dana Bernice</div>
+      <h2 class="section-title">She creates the portrait, designs the jewellery, designs the dress, then brings them to life.</h2>
+      <p class="section-body">Dana Bernice is a UK-based artist, fashion designer, and jeweller.<br>Every face in her portraits is invented from scratch: no models, no references, no photographs. Her pencil creates people who do not exist, then brings them to life.</p>
+      <p class="section-body" style="margin-top:1rem;">Her signature DB fashion and gold jewellery collections are drawn by the same hand that draws her portraits. Three disciplines. One artist. One signature.</p>
+      <blockquote class="about-quote">
+        She creates the portrait, designs the jewellery, designs the dress, then brings them to life. There is nobody else doing all three.
+        <cite>Collector, UK</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <span class="section-label">Get in Touch</span>
+    <p class="section-body">For print orders, jewellery enquiries, or anything else: fill in the form and Dana will be in touch.</p>
+    <form class="contact-form" name="dana-contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="dana-contact">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="First and last name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="enquiry">Type of Enquiry</label>
+        <select id="enquiry" name="enquiry">
+          <option value="">Select one</option>
+          <option value="prints">Art Prints</option>
+          <option value="originals">Original Artwork</option>
+          <option value="jewellery">Jewellery</option>
+          <option value="fashion">Fashion Design</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell Dana what you have in mind..."></textarea>
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn-primary" style="border:none; cursor:pointer; font-family:inherit;">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <span class="initials">DB</span>
+    <p>Original pencil art, bespoke fashion design,<br>and gold DB jewellery.<br>Made for people who carry themselves with presence.</p>
+  </div>
+  <nav class="footer-nav">
+    <a href="#art">Art &amp; Prints</a>
+    <a href="#jewellery">Jewellery</a>
+    <a href="#fashion">Fashion Design</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="footer-contact">
+    <a href="mailto:danabernice@hotmail.co.uk">danabernice@hotmail.co.uk</a>
+    <a href="https://instagram.com/d.bernicecoutureuk" target="_blank" rel="noopener">Instagram: @d.bernicecoutureuk</a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Dana Bernice UK. All rights reserved. All artwork original. Unauthorised reproduction prohibited.</p>
+</footer>
+
+<script>
+  function openMobileMenu() {
+    document.getElementById('mobileMenu').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+</script>
+
+</body>
+</html>
