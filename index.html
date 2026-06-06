@@ -155,7 +155,7 @@
     width: 100%;
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 7fr 3fr;
     overflow: hidden;
     padding-top: 0;
   }
@@ -178,7 +178,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 6rem 4rem 4rem 4rem;
+    padding: 6rem 2.5rem 4rem 2.5rem;
     background: var(--black);
     position: relative;
   }
@@ -215,12 +215,12 @@
   }
 
   .hero-sub {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 300;
     color: var(--gold-pale);
     line-height: 1.75;
-    margin-bottom: 3rem;
-    max-width: 400px;
+    margin-bottom: 2.5rem;
+    max-width: 340px;
   }
 
   .hero-actions {
@@ -228,6 +228,18 @@
     gap: 1.2rem;
     flex-wrap: wrap;
   }
+
+  .hero-email {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: rgba(240,223,160,0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .hero-email:hover { color: var(--gold); }
 
   .btn-primary {
     display: inline-block;
@@ -1104,6 +1116,7 @@
       <a href="#art" class="btn-primary">Explore the Work</a>
       <a href="#contact" class="btn-ghost">Get in Touch</a>
     </div>
+    <a href="mailto:danabernice@hotmail.co.uk" class="hero-email">danabernice@hotmail.co.uk</a>
     <div class="hero-disciplines">
       <span>Original Art</span>
       <span>Bespoke Fashion</span>
