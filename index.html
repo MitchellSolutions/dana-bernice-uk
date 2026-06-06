@@ -857,6 +857,7 @@
   /* ── MOBILE NAV MENU ── */
   .mobile-menu {
     display: none;
+    visibility: hidden;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     width: 100%;
@@ -869,7 +870,7 @@
     gap: 2.5rem;
   }
 
-  .mobile-menu.open { display: flex; }
+  .mobile-menu.open { display: flex; visibility: visible; }
 
   .mobile-menu a {
     font-size: 1.4rem;
@@ -986,8 +987,8 @@
     .hamburger { display: flex; }
 
     .hero { display: grid; grid-template-columns: 1fr; min-height: auto; position: static; }
-    .hero-image-side { display: block; position: static; min-height: unset; max-height: none; aspect-ratio: 4/5; }
-    .hero-image-side img { object-fit: cover; object-position: center top; }
+    .hero-image-side { display: block; position: static; min-height: unset; max-height: none; aspect-ratio: 9/16; }
+    .hero-image-side img { object-fit: cover; object-position: center center; }
     .hero-text-side { position: static; padding: 3.5rem 2rem; min-height: auto; background: var(--black); }
     .hero-text-side::before { display: none; }
     .hero-disciplines { display: none; }
@@ -1031,13 +1032,14 @@
       position: static;
       min-height: unset;
       max-height: none;
-      aspect-ratio: 4/5;
+      aspect-ratio: 9/16;
+      background: #0e0c0a;
     }
     .hero-image-side img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center top;
+      object-fit: contain;
+      object-position: center center;
     }
     .hero-text-side {
       position: static;
@@ -1102,7 +1104,7 @@
 <body>
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu" style="background:#0e0c0a;">
+<div class="mobile-menu" id="mobileMenu" style="display:none; background:#0e0c0a;">
   <button class="mobile-close" onclick="closeMobileMenu()">&#x2715;</button>
   <a href="#art" onclick="closeMobileMenu()">Art &amp; Prints</a>
   <a href="#jewellery" onclick="closeMobileMenu()">Jewellery</a>
@@ -1135,9 +1137,9 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-image-side">
-    <picture>
-      <source media="(max-width: 1100px)" srcset="images/hero_mobile.png">
-      <img src="images/hero.jpg" alt="Dana Bernice UK: artist, fashion designer, jeweller" loading="eager">
+    <picture style="display:block; width:100%; height:100%;">
+      <source media="(max-width: 680px)" srcset="images/hero_mobile.png">
+      <img src="images/hero.jpg" alt="Dana Bernice UK: artist, fashion designer, jeweller" loading="eager" style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block;">
     </picture>
   </div>
   <div class="hero-text-side">
