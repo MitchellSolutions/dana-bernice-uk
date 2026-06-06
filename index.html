@@ -168,15 +168,17 @@
     min-height: 100vh;
   }
 
+  .hero-image-side picture,
   .hero-image-side img {
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center 20%;
-    display: block;
   }
 
-  .hero-img-mobile { display: none; }
+  .hero-image-side img {
+    object-fit: cover;
+    object-position: center 20%;
+  }
 
   .hero-text-side {
     display: flex;
@@ -998,14 +1000,26 @@
     .hero-image-side {
       display: block;
       position: static;
-      min-height: unset;
+      min-height: 0;
       max-height: none;
-      aspect-ratio: 941/1672;
+      aspect-ratio: 941 / 1672;
       background: #f2e8d5;
       margin-top: 0;
+      overflow: hidden;
     }
-    .hero-img-desktop { display: none; }
-    .hero-img-mobile { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center top; }
+
+    .hero-image-side picture,
+    .hero-image-side img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-image-side img {
+      object-fit: contain;
+      object-position: center top;
+    }
+
     .hero-text-side { position: static; padding: 3.5rem 2rem; min-height: auto; background: var(--black); }
     .hero-text-side::before { display: none; }
     .hero-disciplines { display: none; }
@@ -1053,20 +1067,26 @@
     .hero-image-side {
       display: block;
       position: static;
-      min-height: unset;
+      min-height: 0;
       max-height: none;
-      aspect-ratio: 941/1672;
+      aspect-ratio: 941 / 1672;
       background: #f2e8d5;
       margin-top: 0;
+      overflow: hidden;
     }
-    .hero-img-desktop { display: none; }
-    .hero-img-mobile {
+
+    .hero-image-side picture,
+    .hero-image-side img {
       display: block;
       width: 100%;
       height: 100%;
+    }
+
+    .hero-image-side img {
       object-fit: contain;
       object-position: center top;
     }
+
     .hero-text-side {
       position: static;
       z-index: auto;
@@ -1163,8 +1183,10 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-image-side">
-    <img class="hero-img-desktop" src="images/hero.jpg" alt="Dana Bernice UK: artist, fashion designer, jeweller" loading="eager">
-    <img class="hero-img-mobile" src="images/hero_mobile.png" alt="Dana Bernice UK: artist, fashion designer, jeweller" loading="eager">
+    <picture>
+      <source media="(max-width: 1100px)" srcset="images/hero_mobile.png">
+      <img src="images/hero.jpg" alt="Dana Bernice UK: artist, fashion designer, jeweller" loading="eager" fetchpriority="high">
+    </picture>
   </div>
   <div class="hero-text-side">
     <span class="hero-tag">Original Art · Fashion · Gold Jewellery</span>
