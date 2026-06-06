@@ -983,7 +983,8 @@
     .hamburger { display: flex; }
 
     .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-image-side { min-height: 60vw; max-height: 70vh; }
+    .hero-image-side { min-height: 60vw; max-height: none; }
+    .hero-image-side img { object-position: center top; }
     .hero-text-side { padding: 3.5rem 2rem; min-height: auto; }
     .hero-text-side::before { display: none; }
     .hero-disciplines { display: none; }
@@ -1021,7 +1022,7 @@
     body { font-size: 16px; }
     nav { padding: 1rem 1.5rem; }
 
-    .hero-image-side { min-height: 100vw; }
+    .hero-image-side { min-height: 120vw; max-height: none; }
     .hero-image-side img { object-position: center top; }
     .hero-text-side { padding: 3rem 1.5rem; }
     .hero-headline { font-size: clamp(2.4rem, 8vw, 3.5rem); }
