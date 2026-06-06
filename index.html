@@ -52,6 +52,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap;
     padding: 1.2rem 3rem;
     background: rgba(249,244,236,0.92);
     backdrop-filter: blur(12px);
@@ -985,8 +986,8 @@
     .hamburger { display: flex; }
 
     .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-image-side { min-height: unset; max-height: none; aspect-ratio: 4/5; }
-    .hero-image-side img { object-position: left top; object-fit: cover; }
+    .hero-image-side { min-height: unset; max-height: none; aspect-ratio: 16/9; background: #c49a52; }
+    .hero-image-side img { object-fit: contain; object-position: center center; }
     .hero-text-side { padding: 3.5rem 2rem; min-height: auto; }
     .hero-text-side::before { display: none; }
     .hero-disciplines { display: none; }
@@ -1024,8 +1025,8 @@
     body { font-size: 16px; }
     nav { padding: 1rem 1.5rem; }
 
-    .hero-image-side { min-height: unset; max-height: none; aspect-ratio: 4/5; }
-    .hero-image-side img { object-position: left top; object-fit: cover; }
+    .hero-image-side { min-height: unset; max-height: none; aspect-ratio: 4/3; background: #c49a52; }
+    .hero-image-side img { object-fit: contain; object-position: center center; }
     .hero-text-side { padding: 3rem 1.5rem; }
     .hero-headline { font-size: clamp(2.4rem, 8vw, 3.5rem); }
     .hero-actions { flex-direction: column; }
@@ -1077,7 +1078,7 @@
 <body>
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu" id="mobileMenu" style="background:#0e0c0a;">
   <button class="mobile-close" onclick="closeMobileMenu()">&#x2715;</button>
   <a href="#art" onclick="closeMobileMenu()">Art &amp; Prints</a>
   <a href="#jewellery" onclick="closeMobileMenu()">Jewellery</a>
@@ -1191,15 +1192,6 @@
     <div class="sketch-pairs">
       <div class="sketch-pair">
         <div class="img-wrap">
-          <img src="images/sketch_digital1.jpg" alt="Dana Bernice pencil sketch and digitised portrait" loading="lazy">
-        </div>
-        <div class="sketch-pair-label">
-          <span>The Drawing</span>
-          <span>The Digital</span>
-        </div>
-      </div>
-      <div class="sketch-pair">
-        <div class="img-wrap">
           <img src="images/sketch_digital3.jpg" alt="Dana Bernice sketch to digital comparison" loading="lazy">
         </div>
         <div class="sketch-pair-label">
@@ -1214,6 +1206,14 @@
         <div class="sketch-pair-label">
           <span>The Drawing</span>
           <span>The Digital</span>
+        </div>
+      </div>
+      <div class="sketch-pair">
+        <div class="img-wrap">
+          <img src="images/sketch_digital1.jpg" alt="Dana Bernice original pencil portrait" loading="lazy">
+        </div>
+        <div class="sketch-pair-label">
+          <span>The Drawing</span>
         </div>
       </div>
     </div>
