@@ -1021,7 +1021,8 @@
     body { font-size: 16px; }
     nav { padding: 1rem 1.5rem; }
 
-    .hero-image-side { min-height: 75vw; }
+    .hero-image-side { min-height: 100vw; }
+    .hero-image-side img { object-position: center top; }
     .hero-text-side { padding: 3rem 1.5rem; }
     .hero-headline { font-size: clamp(2.4rem, 8vw, 3.5rem); }
     .hero-actions { flex-direction: column; }
@@ -1346,7 +1347,6 @@
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-inner">
-    <span class="section-label">Get in Touch</span>
     <h2 class="section-title">Get in Touch</h2>
     <p class="section-body">For print orders, jewellery enquiries, or anything else: fill in the form and Dana will be in touch.</p>
     <form class="contact-form" name="dana-contact" method="POST" data-netlify="true">
